@@ -1,8 +1,12 @@
 # replacer
 
-Usage `./replacer.py from to mask dir` (uses pypy3)
+Usage `./replacer.py from to mask dir excl [dry]` (uses pypy3)
 
-Replace anything matching `from` regular expression to `to` string with `re.sub` in every file matching `mask` regular expression under `dir` directory recursively, ignoring hidden dirs (name starts with dot).
+Replace anything matching `from` regular expression to `to` string with `re.sub` in every file matching `mask` regular expression under `dir` directory recursively, ignoring dirs matching `excl`.
+
+`dry` to only show changes, no write.
+
+Uses `diff` to show what is replaced.
 
 Depends on `aiofile`.
 
